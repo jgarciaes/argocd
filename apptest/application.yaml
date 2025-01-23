@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apptest
+  name: app-argo-application
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/jgarciaes/argocd.git
     targetRevision: HEAD
-    path: apptest
+    path: dev
   destination:
     server: https://kubernetes.default.svc
     namespace: apptest
